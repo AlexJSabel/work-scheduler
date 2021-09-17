@@ -69,3 +69,24 @@ textarea{
   font-size: 20px;
   transition: all .3s ease-in-out;
 }
+
+
+.container div {
+  border-top: solid 1px black;
+  border-bottom: solid 1px black;
+ 
+}
+
+#time {
+  border-right: solid 1px black;
+ text-align: center;
+ justify-items: center;
+}
+
+#save {
+  border-left: solid 1px black;
+}
+
+#eventBox {
+  border: none; 
+}
