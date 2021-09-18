@@ -1,22 +1,80 @@
 $( document ).ready(function() {
     // Handler for .ready() called.
-    /**
-     * Listen for click event
-     * 
-     * save value to local storage
-     * 
-     * 
-     */
+ 
+    
+    // Current time with moment.js
+    var currentTime = moment()
+    .format("[Today is] dddd, MMMM do YYYY hh:mm:ss");
+    console.log(currentTime);
 
-    $(".saveBtn").on("click", function(){
-        console.log("clicked")
-
-        var savedText =  $("#eventBox").val();
+    currentTime = document.getElementById("lead");
+    
+    
+    
+    //  Listen for click event
+       $(".saveBtn").on("click", function(event){
+        console.log()
+        event.preventDefault
+        var savedText =  $("textarea").val();
         console.log(savedText);
+    
+     //  save value to local storage
+      //  savedText = function() {
+            //document.getElementById('textarea');
+            localStorage.setItem("savedText", savedText);
+        alert("worked" + localStorage.getItem("savedText"))
+   // }
+    
     })
+    });
 
+   
+      
+    //  
 
+            //  Changing color depending on time
 
+    //Change textarea background color based on time
+var checkTime = function () {
 
+    //Get Current time
+    var currentTime = moment().format('H');
 
-});
+    //get all elements with class "taskarea"
+    var timeBlockElements = $(".textarea");
+
+    //loop through taskarea classes
+    for (var i = 0 ; i < timeBlockElements.length ; i++) {
+
+        //Get element i's ID as a string
+        var elementID = timeBlockElements[i].id;
+        
+
+        //get element by ID
+        var manipID = document.getElementById(timeBlockElements[i].id)
+
+        //remove any old classes from element
+        $(timeBlockElements[i].id).removeClass(".present .past .future");
+    
+
+         
+          
+        // apply new class if task is present/past/future
+        if (elementID < currentTime) {
+            $(manipID).addClass("past");
+        } else if (elementID > currentTime) {
+            $(manipID).addClass("future");
+        } else {
+            $(manipID).addClass("present");
+           
+        }
+    }
+
+   
+
+}
+
+// checkTime every 5 minutes
+setInterval(checkTime(), (1000 * 60) * 5);
+
+    

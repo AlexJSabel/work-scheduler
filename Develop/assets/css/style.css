@@ -71,14 +71,15 @@ textarea{
 }
 
 
-.container div {
+/*.container div {
   border-top: solid 1px black;
   border-bottom: solid 1px black;
  
-}
+}*/
 
 #time {
   border-right: solid 1px black;
+  border-top: solid 1px black;
  text-align: center;
  justify-items: center;
 }
