@@ -4,7 +4,7 @@ $( document ).ready(function() {
     
     // Current time with moment.js
     var currentTime = moment()
-    .format("[Today is] dddd, MMMM do YYYY <p></p> hh:mm:ss");
+    .format("[Today is] dddd, MMMM Do YYYY <p></p> hh:mm:ss");
     console.log(currentTime);
 
     document.getElementById("currentDay").innerHTML = currentTime;
