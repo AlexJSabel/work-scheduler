@@ -1,6 +1,10 @@
 $( document ).ready(function() {
     // Handler for .ready() called.
  
+    // Get Local Storage
+    var saved = localStorage.getItem("savedText");
+    console.log(saved)
+    $("textarea").val(saved);
     
     // Current time with moment.js
     var currentTime = moment()
@@ -19,8 +23,8 @@ $( document ).ready(function() {
 
     // Local Storage
 
-    
-            localStorage.getItem("savedText" , savedText);
+
+            
         
             localStorage.setItem("savedText", savedText); 
             
@@ -77,6 +81,6 @@ var checkTime = function () {
 }
 
 // checkTime every 5 minutes
-setInterval(checkTime(), (1000 * 60) * 5);
+setInterval(checkTime(), (100 * 60) * 5);
 
     
