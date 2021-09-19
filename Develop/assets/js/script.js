@@ -16,11 +16,16 @@ $( document ).ready(function() {
            event.preventDefault()
         console.log('click')
         var savedText =  $("textarea").val();
+
+    // Local Storage
+
     
-         document.getElementById('textarea');
-         localStorage.setItem("savedText", savedText);
-    
-         localStorage.getItem("savedText" , savedText);
+            localStorage.getItem("savedText" , savedText);
+        
+            localStorage.setItem("savedText", savedText); 
+            
+         
+         alert(savedText)
     
     })
     });
