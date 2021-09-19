@@ -4,33 +4,30 @@ $( document ).ready(function() {
     
     // Current time with moment.js
     var currentTime = moment()
-    .format("[Today is] dddd, MMMM do YYYY hh:mm:ss");
+    .format("[Today is] dddd, MMMM do YYYY <p></p> hh:mm:ss");
     console.log(currentTime);
 
-    currentTime = document.getElementById("lead");
+    document.getElementById("currentDay").innerHTML = currentTime;
     
     
     
     //  Listen for click event
        $(".saveBtn").on("click", function(event){
-        console.log()
-        event.preventDefault
+           event.preventDefault()
+        console.log('click')
         var savedText =  $("textarea").val();
-        console.log(savedText);
     
-     //  save value to local storage
-      //  savedText = function() {
-            //document.getElementById('textarea');
-            localStorage.setItem("savedText", savedText);
-        alert("worked" + localStorage.getItem("savedText"))
-   // }
+         document.getElementById('textarea');
+         localStorage.setItem("savedText", savedText);
+    
+         localStorage.getItem("savedText" , savedText);
     
     })
     });
 
    
       
-    //  
+    
 
             //  Changing color depending on time
 
@@ -42,7 +39,7 @@ var checkTime = function () {
 
     //get all elements with class "taskarea"
     var timeBlockElements = $(".textarea");
-
+   
     //loop through taskarea classes
     for (var i = 0 ; i < timeBlockElements.length ; i++) {
 

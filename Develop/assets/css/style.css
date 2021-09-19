@@ -91,3 +91,7 @@ textarea{
 #eventBox {
   border: none; 
 }
+
+.lead {
+  padding: 1rem;
+}
