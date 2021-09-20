@@ -1,6 +1,27 @@
 $( document ).ready(function() {
     // Handler for .ready() called.
- 
+
+    // Get textbox Ids
+   var saved = [
+       document.getElementById("#box09") ,
+       document.getElementById("box10") , 
+       document.getElementById("box11") ,
+       document.getElementById("box12") ,
+       document.getElementById("box01") ,
+       document.getElementById("box02") ,
+       document.getElementById("box03") ,
+       document.getElementById("box04") ,
+       document.getElementById("box05") ,
+    ]
+    console.log(saved);
+   
+
+
+
+
+
+
+
     // Get Local Storage
     var saved = localStorage.getItem("savedText");
     console.log(saved)
@@ -18,7 +39,6 @@ $( document ).ready(function() {
     //  Listen for click event
        $(".saveBtn").on("click", function(event){
            event.preventDefault()
-        console.log('click')
         var savedText =  $("textarea").val();
 
     // Local Storage
